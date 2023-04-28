@@ -1,0 +1,255 @@
+<html>
+
+<head>
+    <title>Zomato</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="https://i.ibb.co/FWBHFwN/Zomato-logo.png" rel="icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Nav bar  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+                            alt="Brandlogo" id="brandlogo">
+                    </a>
+                </div>
+            </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0" id="Navbaroptions">
+                    <li class="nav-item dropdown">
+                        <a id="location" class="nav-link dropdown-toggle " href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Select your location
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Banglore</a></li>
+                            <li><a class="dropdown-item" href="#">Shivmogga</a></li>
+                            <li><a class="dropdown-item" href="#">Hubli</a></li>
+                            <li><a class="dropdown-item" href="#">Dharwar</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">More </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form id="searchbar" class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="searchbutton" class="btn btn-outline-warning" type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <div id="icons">
+                    <!-- Button trigger modal login -->
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#Modal1">
+                        <i class="bi bi-box-arrow-in-right">Log in</i>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="ModalLabel1">Log in</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="InputPhonenumber" class="form-label">Phone no.</label>
+                                            <input type="tel" class="form-control" id="InputPhonenumber">
+                                        </div>
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <button type="submit" class="btn btn-danger">Send one time password</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal Sign up -->
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#Modal2">
+                        <i class="bi bi-person-fill">Sign up</i>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="ModalLabel2">Sign up</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="Inputname" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="Inputname">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="InputEmail1" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="InputEmail1"
+                                                aria-describedby="emailHelp">
+                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="Check1">
+                                            <label class="form-check-label" for="Check1">
+                                                I agree to Zomato's Terms of Service, Privacy Policy and Content Policies</label>
+                                        </div>
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <button type="submit" class="btn btn-secondary" disabled>Create account</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- bread crumb  -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="bclinks" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="bclinks" href="#">India</a></li>
+            <li class="breadcrumb-item"><a class="bclinks" href="#">Banglore Restaurants</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a class="bclinksactive" href="#">A2B - Adyar Ananda Bhavanr</a></li>
+        </ol>
+    </nav>
+    <!-- Content  -->
+    <div class="gallery">
+        <img class="Firstimg" src="https://b.zmtcdn.com/data/pictures/chains/1/50011/a525cfb94b5006fce46ee2d8de01b1e3.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*" alt="Img">
+        <img class="Secondimg" src="https://b.zmtcdn.com/data/pictures/chains/1/50011/720af8adb52e4d8c558b7aa8e5085747.jpg?output-format=webp&fit=around|300:273&crop=300:273;*,*" alt="img">
+        <img class="thirdimg" src="https://b.zmtcdn.com/data/pictures/chains/1/50011/9411ac3d7749f6f358579a88ce15d007.jpg?output-format=webp&fit=around|300:273&crop=300:273;*,*" alt="img">
+        <img class="fourthimg" src="https://b.zmtcdn.com/data/pictures/chains/1/50011/46ad117a8d6cce1e6abf5a3835edf7d7.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A" alt="img">
+        <p class="moreimgs"><a href="#">View more imges</a></p>
+    </div>
+    <div class="Maincontent">
+        <h1>A2B - Adyar Ananda Bhavan</h1>
+        <p class="firsttag">South Indian, Street Food, North Indian, Chinese, Fast Food, Beverages, Desserts</p>
+        <p class="seconttag">Shanti Nagar, Bangalore</p>
+        <span class="color">Closed for dining</span>
+        <span>-</span>
+        <span class="color2">Opens tomorrow at 7am</span>
+        <div class="rating">
+            
+        </div>
+    </div>
+    <div class="navigation">
+        <button type="button" class="btn btn-outline-secondary btns"><i class="bi bi-geo-alt icons1"></i>Direction</button>
+        <button type="button" class="btn btn-outline-secondary btns"><i class="bi bi-bookmark-plus icons1"></i>Bookmark</button>
+        <button type="button" class="btn btn-outline-secondary btns"><i class="bi bi-share icons1"></i>Share</button>
+    </div>
+    <nav class="navtab">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Overview</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Order Online</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Reviews</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Photos</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Menu</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            <div class="Overview">
+                <h3>About this place</h3>
+                <p>Menu</p>
+                <div class="menu">
+                    <span class="menu1">
+                        <figure>
+                            <img class="menu-item" src="https://b.zmtcdn.com/data/menus/011/50011/a84dac7fe543893ce6236831d036b865.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A" alt="menu items">
+                        </figure>
+                        <figcaption>Food menu</figcaption>
+                    </span>
+                    <span class="menu2">
+                        <figure>
+                            <img class="menu-item" src="https://b.zmtcdn.com/data/menus/011/50011/81d4587c3f427bfb7fc7a6ea4f8bfce6.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A" alt="menu items">
+                        </figure>
+                        <figcaption>Beverages</figcaption>
+                    </span>
+                </div> 
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="order-online">
+                <h3>Recommended</h3>
+                <div class="order">
+                    <img src="https://b.zmtcdn.com/data/dish_photos/409/72ca26c5cbad4d6a10fd6156eb6dd409.jpg?fit=around|130:130&crop=130:130;*,*" alt="items">
+                    <p class="order-1">Mini Tiffin</p>
+                    <p class="tag">Must try</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+      </div>
+
+
+    <!-- Footer  -->
+    <footer>
+        <div class="brandlogo">
+          <a href="https://sameerjoshi24.github.io/Zomato_project/">
+            <img src=" https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="logo"
+              class="brandlogo">
+          </a>
+        </div>
+        <div class="linkpart">
+            <div class="firstrow">
+                <h6>ABOUT ZOMATO</h6>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Work With Us</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Report Fraud</a>
+                <a href="#">Contact Us</a>
+                <a href="#"></a>
+            </div>
+            <div class="Secondrow">
+                <h6>ZOMAVERSE</h6>
+                <a href="#">Zomato</a>
+                <a href="#">Blinkit</a>
+                <a href="#">Feeding India</a>
+                <a href="#">Hyperpure</a>
+                <a href="#">Zomaland</a>
+            </div>
+            <div class="thirdrow">
+                <h6>FOR RESTAURANTS</h6>
+                <a href="#">Partner With Us</a>
+                <a href="#">Apps For You</a>
+                <h6 class="forthheading">FOR ENTERPRISES</h6>
+                <a href="#">Zomato For Enterprise</a>
+            </div>
+            <div class="fourthrow">
+                <h6>LEARN MORE</h6>
+                <a href="#">Privacy</a>
+                <a href="#">Security</a>
+                <a href="#">Terms</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Amazon App Download</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
